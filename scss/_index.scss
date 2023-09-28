@@ -1,0 +1,672 @@
+//base
+img{
+    width: 100%;
+    height: auto;
+}
+// body {
+//     font-family: "-apple-system", BlinkMacSystemFont, "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "メイリオ", "Hiragino Kaku Gothic ProN", "MS PGothic", Osaka, "sans-serif";
+// }
+
+
+//main
+.header-logo{
+    height: 60px;
+}
+.shop-btn:hover{
+    background-color: #5d4a3b;
+    transition: 0.3s;
+    color: white;
+}
+header{
+    transition: 1s;
+    z-index: 10;
+}
+// main{
+//     height: 10000px;
+// }
+
+.main-block-1{
+    position: relative;
+    .title-block{
+        width: 575px;
+    }
+}
+.main-block-2{
+    .img-block{
+        width: 75%;
+        height: 750px;
+        border-radius: 0 100px 100px 0;
+    }
+    button{
+        color: #5d4a3b;
+        border: none;
+        background-color: transparent;
+    }
+    button:hover{
+        color: red;
+    }
+    ul{
+        li{
+            position: relative;
+        }
+        .before-dot::before{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: -20px;
+
+            content: "fiber_manual_record";
+            font-variation-settings:
+            'FILL' 1;
+            font-size: 10px;
+        }
+        .after-dot1::after{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 30px;
+            left: -20px;
+
+            content: "more_vert";
+            font-size: 10px;
+        }
+        .after-dot2::after{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 38px;
+            left: -20px;
+
+            content: "more_vert";
+            font-size: 10px;
+        }
+        .after-dot3::after{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 46px;
+            left: -20px;
+
+            content: "more_vert";
+            font-size: 10px;
+        }
+    }
+}
+.main-block-3{
+    height: 2050px;
+    .text-block{
+        .before-dot::before{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: -10px;
+    
+            content: "fiber_manual_record";
+            font-variation-settings:
+            'FILL' 1;
+            font-size: 10px;
+            color: red;
+        }
+    }
+    .img-group{
+        width: 60%;
+        position: relative;
+        .img-block{
+            position: absolute;
+            img{
+                transition: 1s;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.05);
+                    transition: 1s;
+                }
+                .text-block{
+                    .circle{
+                        width: 90%;
+                        height: 90%;
+                        transition: 1s;
+                    }
+                    .arrow::after{
+                        color: #5d4a3b;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            .text-block{
+                z-index: 3;
+                position: absolute;
+                top: 140px;
+                left: 100px;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                
+                .arrow-block{
+                    position: relative;
+                    width: 100px;
+                    height: 100px;
+
+                    border: 2px solid white;
+                    border-radius: 50%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .circle{
+                    width: 0px;
+                    height: 0px;
+                    background-color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 1s;
+                }
+                .arrow::after{
+                    content: "east";
+                    font-size: 30px;
+                    transition: 0.75s;
+                }
+                    
+            }
+        }
+        .img-block-1{
+            top: 0;
+            z-index: 1;
+            border-radius: 100px 0 0 0;
+            overflow: hidden;
+        }
+        .img-block-2{
+            top: 880px;
+            z-index: 2;
+            border-radius: 100px 0 0 100px;
+            overflow: hidden;
+        }
+    }
+}
+.main-block-4{
+    .before-dot::before{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: -10px;
+
+        content: "fiber_manual_record";
+        font-variation-settings:
+        'FILL' 1;
+        font-size: 10px;
+        color: red;
+    }
+    .img-block{position: relative;
+        width: 90%;
+        border-radius: 100px 0 0 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+    //跑馬燈
+    .marquee-block{
+        position: absolute;
+        top: 50%; 
+        .wrapper{
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .wrapper-1{
+            animation: marquee-animation 30s linear infinite;
+        }
+        .wrapper-2{
+            animation: marquee-animation 30s linear infinite;
+            animation-delay: -15s;
+        }
+        .product-img{
+            width: 60px;
+        }
+        .text{
+            white-space: nowrap;
+            color: white;
+            margin-bottom: 0;
+        }
+    }
+}
+@keyframes marquee-animation{
+    0%{transform: translateX(100%)}
+    100%{transform: translateX(-100%)}
+}
+.main-block-5{
+    z-index: 0;
+    position: relative;
+    top: -200px;
+    padding-top: 200px;
+    border-radius: 0 0 100px 0;
+    img{
+        width: 230px;
+    }
+    .text-block{
+        width: 600px;
+    }
+    .arrow-block{
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        border: 2px solid #5d4a3b;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle{
+        width: 0px;
+        height: 0px;
+        background-color: #5d4a3b;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+    }
+    .arrow::after{
+        content: "east";
+        color: #5d4a3b;
+        font-size: 30px;
+        transition: 0.75s;
+        
+    }
+    li{
+        &:hover{
+            .circle{
+                width: 90%;
+                height: 90%;
+                transition: 1s;
+            }
+            .arrow::after{
+                color: white;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+.main-block-6{
+    height: 2750px;
+    .text-block{
+        width: 450px;
+        P:nth-of-type(3){
+            width: 320px;
+        }
+        .before-dot::before{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: -10px;
+    
+            content: "fiber_manual_record";
+            font-variation-settings:
+            'FILL' 1;
+            font-size: 10px;
+            color: red;
+        }
+    }
+    .img-block{
+        width: 420px;
+        border-radius: 50%;
+        overflow: hidden;
+
+    }
+    img{
+        transition: 1s;
+    }
+    li:hover{
+        img{
+            transform: scale(1.1);
+            transition: 1s;
+        }
+    }
+}
+.main-block-7{
+    .left-block{
+        .before-dot::before{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: -10px;
+    
+            content: "fiber_manual_record";
+            font-variation-settings:
+            'FILL' 1;
+            font-size: 10px;
+            color: red;
+        }
+        .before-dot-big::before{
+            left: -13px;
+            font-size: 18px;
+        }
+        .before-dot-black::before{
+            color: #5d4a3b;
+        }
+        a:hover{
+            color: red;
+            transition: 0.3s;
+            .circle{
+                border-color: red;
+                transition: 0.3s;
+            }
+            .arrow::after{
+                color: red;
+                transition: 0.3s;
+            }
+        }
+        .circle{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #5d4a3b;
+            border-radius: 50%;
+            .arrow::after{
+                content: "chevron_right";
+            }
+        }
+    }
+    .right-block{
+        .arrow{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 20px;
+        }
+        .arrow::after{
+            content: "east";
+        }
+        .fill-line{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #5d4a3b;
+            width: 0%;
+            height: 1px;
+        }
+        li:hover{
+            a{
+                color: #8c8980;
+                transition: 0.3s;
+            }
+            .fill-line{
+                width: 100%;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+.main-block-8{
+    background-color: #5d4a3b;
+    .two-block{
+        width: 100%;
+        height: 600px;
+        border-radius: 0 0 100px 100px;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+    }
+    .mid-line{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: white;
+        z-index: 4;
+    }
+    .dark-mask{
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    .two-block:has(.mid-line:hover) .left-block img{
+        opacity: 0;
+    }
+    .two-block:has(.mid-line:hover) .right-block img{
+        opacity: 0;
+    }
+    //左邊隱藏
+    .two-block:has(.left-block:hover)>.big-img-01{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .two-block:has(.left-block:hover)>.right-block img{
+        opacity: 0;
+        transition: 0.5s;
+    }
+    //右邊隱藏
+    .two-block:has(.right-block:hover)>.big-img-02{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .two-block:has(.right-block:hover)>.left-block img{
+        opacity: 0;
+        transition: 0.5s;
+    }
+    //大圖隱藏
+    .big-img-01{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-position: 0 -50px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .big-img-02{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-position: 0 -50px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .left-block{
+        z-index: 3;
+        position: relative;
+        width: 50%;
+        &:hover{
+            .circle{
+                width: 90%;
+                height: 90%;
+                transition: 1s;
+            }
+            .arrow::after{
+                color: #5d4a3b;
+                transition: 0.5s;
+            }
+        }
+        .text-block{
+            position: absolute;
+            top: 40%;
+            left: 150px;
+            z-index: 5;
+            color: white;
+        }
+        .arrow-block{
+            z-index: 5;
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+
+            width: 100px;
+            height: 100px;
+
+            border: 2px solid white;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            width: 0px;
+            height: 0px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+        }
+        .arrow::after{
+            color: white;
+            content: "east";
+            font-size: 30px;
+            transition: 0.75s;
+        }
+        img{
+            z-index: 1;
+            object-position: 0 -100px;
+            position: relative;
+            opacity: 1;
+            transition: 0.5s;
+        }
+        &:hover{
+            img{
+                opacity: 0;
+                transition: 0.5s;
+            }
+        }
+    }
+    .right-block{
+        z-index: 3;
+        position: relative;
+        width: 50%;
+        &:hover{
+            .circle{
+                width: 90%;
+                height: 90%;
+                transition: 1s;
+            }
+            .arrow::after{
+                color: #5d4a3b;
+                transition: 0.5s;
+            }
+        }
+        .text-block{
+            position: absolute;
+            top: 40%;
+            left: 150px;
+            z-index: 5;
+            color: white;
+        }
+        .arrow-block{
+            z-index: 5;
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+
+            width: 100px;
+            height: 100px;
+
+            border: 2px solid white;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            width: 0px;
+            height: 0px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+        }
+        .arrow::after{
+            color: white;
+            content: "east";
+            font-size: 30px;
+            transition: 0.75s;
+        }
+        img{
+            z-index: 1;
+            object-position: 0 -100px;
+            position: relative;
+            opacity: 1;
+            transition: 0.5s;
+        }
+        &:hover{
+            img{
+                opacity: 0;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+footer{
+    background-color: #5d4a3b;
+    color: white;
+    .left-block{
+        .img-block{
+            width: 300px;
+        }
+        a:hover{
+            img{
+                opacity: 0.5;
+                transition: 0.3s;
+            }
+        }
+    }
+    .right-block{
+        a{
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.bot-img-block{
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .dark-mask{
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.25);
+    }
+    a:hover{
+        img{
+            transform: scale(1.025);
+            transition: 1s;
+        }
+        .dark-mask{
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            transition: 1s;
+        }
+    }
+    .text-block{
+        z-index: 3;
+        position: relative;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+}
